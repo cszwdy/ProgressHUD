@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name     = 'ProgressHUD'
-  s.version  = '0.0.4'
+  s.name     = 'FuckingHUD'
+  s.version  = '0.0.5'
   s.ios.deployment_target = '11.0'
   # s.tvos.deployment_target = '9.0'
   s.license  =  { :type => 'MIT', :file => 'LICENSE.txt' }
