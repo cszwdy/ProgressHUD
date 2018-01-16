@@ -10,6 +10,11 @@
 		2CE4F974200C8E0700F86749 /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE4F96A200C8E0700F86749 /* ProgressHUD.framework */; };
 		2CE4F979200C8E0700F86749 /* ProgressHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4F978200C8E0700F86749 /* ProgressHUDTests.swift */; };
 		2CE4F97B200C8E0700F86749 /* ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE4F96D200C8E0700F86749 /* ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CE4F985200C8EAB00F86749 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4F984200C8EAB00F86749 /* ProgressHUD.swift */; };
+		2CE4F9D0200CA6CD00F86749 /* AppleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4F9CF200CA6CD00F86749 /* AppleStyle.swift */; };
+		2CE4F9D2200CA70200F86749 /* Apple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4F9D1200CA70200F86749 /* Apple.storyboard */; };
+		2CE4F9D5200CAEF000F86749 /* Apple.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4F9D4200CAEF000F86749 /* Apple.xcassets */; };
+		2CF94C75200D98E2004720DB /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF94C74200D98E2004720DB /* Apple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		2CE4F973200C8E0700F86749 /* ProgressHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE4F978200C8E0700F86749 /* ProgressHUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDTests.swift; sourceTree = "<group>"; };
 		2CE4F97A200C8E0700F86749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CE4F984200C8EAB00F86749 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		2CE4F9CF200CA6CD00F86749 /* AppleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStyle.swift; sourceTree = "<group>"; };
+		2CE4F9D1200CA70200F86749 /* Apple.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Apple.storyboard; sourceTree = "<group>"; };
+		2CE4F9D4200CAEF000F86749 /* Apple.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Apple.xcassets; sourceTree = "<group>"; };
+		2CF94C74200D98E2004720DB /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +81,10 @@
 		2CE4F96C200C8E0700F86749 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				2CF94C73200D98C4004720DB /* hud */,
+				2CE4F9CE200CA6AF00F86749 /* Styles */,
 				2CE4F96D200C8E0700F86749 /* ProgressHUD.h */,
+				2CE4F984200C8EAB00F86749 /* ProgressHUD.swift */,
 				2CE4F96E200C8E0700F86749 /* Info.plist */,
 			);
 			path = ProgressHUD;
@@ -84,6 +97,24 @@
 				2CE4F97A200C8E0700F86749 /* Info.plist */,
 			);
 			path = ProgressHUDTests;
+			sourceTree = "<group>";
+		};
+		2CE4F9CE200CA6AF00F86749 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				2CE4F9CF200CA6CD00F86749 /* AppleStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		2CF94C73200D98C4004720DB /* hud */ = {
+			isa = PBXGroup;
+			children = (
+				2CF94C74200D98E2004720DB /* Apple.swift */,
+				2CE4F9D1200CA70200F86749 /* Apple.storyboard */,
+				2CE4F9D4200CAEF000F86749 /* Apple.xcassets */,
+			);
+			path = hud;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +179,7 @@
 				TargetAttributes = {
 					2CE4F969200C8E0700F86749 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					2CE4F972200C8E0700F86749 = {
@@ -179,6 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE4F9D5200CAEF000F86749 /* Apple.xcassets in Resources */,
+				2CE4F9D2200CA70200F86749 /* Apple.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF94C75200D98E2004720DB /* Apple.swift in Sources */,
+				2CE4F9D0200CA6CD00F86749 /* AppleStyle.swift in Sources */,
+				2CE4F985200C8EAB00F86749 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +371,7 @@
 		2CE4F97F200C8E0700F86749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Emiaostein.ProgressHUD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +393,7 @@
 		2CE4F980200C8E0700F86749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +414,7 @@
 		2CE4F982200C8E0700F86749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProgressHUDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +428,7 @@
 		2CE4F983200C8E0700F86749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProgressHUDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
