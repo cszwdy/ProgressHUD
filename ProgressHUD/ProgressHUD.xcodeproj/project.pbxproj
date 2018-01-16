@@ -7,35 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CE4F974200C8E0700F86749 /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE4F96A200C8E0700F86749 /* ProgressHUD.framework */; };
-		2CE4F979200C8E0700F86749 /* ProgressHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4F978200C8E0700F86749 /* ProgressHUDTests.swift */; };
 		2CE4F97B200C8E0700F86749 /* ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE4F96D200C8E0700F86749 /* ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CE4F985200C8EAB00F86749 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4F984200C8EAB00F86749 /* ProgressHUD.swift */; };
-		2CE4F9D0200CA6CD00F86749 /* AppleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4F9CF200CA6CD00F86749 /* AppleStyle.swift */; };
 		2CE4F9D2200CA70200F86749 /* Apple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4F9D1200CA70200F86749 /* Apple.storyboard */; };
 		2CE4F9D5200CAEF000F86749 /* Apple.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4F9D4200CAEF000F86749 /* Apple.xcassets */; };
 		2CF94C75200D98E2004720DB /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF94C74200D98E2004720DB /* Apple.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2CE4F975200C8E0700F86749 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CE4F961200C8E0700F86749 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CE4F969200C8E0700F86749;
-			remoteInfo = ProgressHUD;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		2CE4F96A200C8E0700F86749 /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE4F96D200C8E0700F86749 /* ProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		2CE4F96E200C8E0700F86749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CE4F973200C8E0700F86749 /* ProgressHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CE4F978200C8E0700F86749 /* ProgressHUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDTests.swift; sourceTree = "<group>"; };
 		2CE4F97A200C8E0700F86749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CE4F984200C8EAB00F86749 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
-		2CE4F9CF200CA6CD00F86749 /* AppleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStyle.swift; sourceTree = "<group>"; };
 		2CE4F9D1200CA70200F86749 /* Apple.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Apple.storyboard; sourceTree = "<group>"; };
 		2CE4F9D4200CAEF000F86749 /* Apple.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Apple.xcassets; sourceTree = "<group>"; };
 		2CF94C74200D98E2004720DB /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
@@ -46,14 +30,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CE4F970200C8E0700F86749 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CE4F974200C8E0700F86749 /* ProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				2CE4F96A200C8E0700F86749 /* ProgressHUD.framework */,
-				2CE4F973200C8E0700F86749 /* ProgressHUDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				2CF94C73200D98C4004720DB /* hud */,
-				2CE4F9CE200CA6AF00F86749 /* Styles */,
 				2CE4F96D200C8E0700F86749 /* ProgressHUD.h */,
 				2CE4F984200C8EAB00F86749 /* ProgressHUD.swift */,
 				2CE4F96E200C8E0700F86749 /* Info.plist */,
@@ -93,18 +67,9 @@
 		2CE4F977200C8E0700F86749 /* ProgressHUDTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CE4F978200C8E0700F86749 /* ProgressHUDTests.swift */,
 				2CE4F97A200C8E0700F86749 /* Info.plist */,
 			);
 			path = ProgressHUDTests;
-			sourceTree = "<group>";
-		};
-		2CE4F9CE200CA6AF00F86749 /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				2CE4F9CF200CA6CD00F86749 /* AppleStyle.swift */,
-			);
-			path = Styles;
 			sourceTree = "<group>";
 		};
 		2CF94C73200D98C4004720DB /* hud */ = {
@@ -149,24 +114,6 @@
 			productReference = 2CE4F96A200C8E0700F86749 /* ProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2CE4F972200C8E0700F86749 /* ProgressHUDTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CE4F981200C8E0700F86749 /* Build configuration list for PBXNativeTarget "ProgressHUDTests" */;
-			buildPhases = (
-				2CE4F96F200C8E0700F86749 /* Sources */,
-				2CE4F970200C8E0700F86749 /* Frameworks */,
-				2CE4F971200C8E0700F86749 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CE4F976200C8E0700F86749 /* PBXTargetDependency */,
-			);
-			name = ProgressHUDTests;
-			productName = ProgressHUDTests;
-			productReference = 2CE4F973200C8E0700F86749 /* ProgressHUDTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,10 +127,6 @@
 					2CE4F969200C8E0700F86749 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-					};
-					2CE4F972200C8E0700F86749 = {
-						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -201,7 +144,6 @@
 			projectRoot = "";
 			targets = (
 				2CE4F969200C8E0700F86749 /* ProgressHUD */,
-				2CE4F972200C8E0700F86749 /* ProgressHUDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,13 +158,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CE4F971200C8E0700F86749 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -231,28 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF94C75200D98E2004720DB /* Apple.swift in Sources */,
-				2CE4F9D0200CA6CD00F86749 /* AppleStyle.swift in Sources */,
 				2CE4F985200C8EAB00F86749 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CE4F96F200C8E0700F86749 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CE4F979200C8E0700F86749 /* ProgressHUDTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2CE4F976200C8E0700F86749 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CE4F969200C8E0700F86749 /* ProgressHUD */;
-			targetProxy = 2CE4F975200C8E0700F86749 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2CE4F97C200C8E0700F86749 /* Debug */ = {
@@ -304,7 +222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -358,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -411,34 +329,6 @@
 			};
 			name = Release;
 		};
-		2CE4F982200C8E0700F86749 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ProgressHUDTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Emiaostein.ProgressHUDTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2CE4F983200C8E0700F86749 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ProgressHUDTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Emiaostein.ProgressHUDTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,15 +346,6 @@
 			buildConfigurations = (
 				2CE4F97F200C8E0700F86749 /* Debug */,
 				2CE4F980200C8E0700F86749 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CE4F981200C8E0700F86749 /* Build configuration list for PBXNativeTarget "ProgressHUDTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CE4F982200C8E0700F86749 /* Debug */,
-				2CE4F983200C8E0700F86749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -196,11 +196,20 @@ private final class ProgressHUDContainerViewController: UIViewController {
         guard ProgressHUDContainerViewController.animated == true else {
             return
         }
-        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {[weak self] in
-            guard let sf = self else {return}
-            sf.hud.view.alpha = 1.0
-            sf.hud.view.transform = .identity
-        }) { (position) in
+        if #available(iOS 10.0, *) {
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {[weak self] in
+                guard let sf = self else {return}
+                sf.hud.view.alpha = 1.0
+                sf.hud.view.transform = .identity
+            }) { (position) in
+            }
+        } else {
+            // Fallback on earlier versions
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {[weak self] in
+                guard let sf = self else {return}
+                sf.hud.view.alpha = 1.0
+                sf.hud.view.transform = .identity
+            }, completion: nil)
         }
     }
     
@@ -209,13 +218,25 @@ private final class ProgressHUDContainerViewController: UIViewController {
             completed(self)
             return
         }
-        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {[weak self] in
-            guard let sf = self else {return}
-            sf.hud.view.alpha = 0.0
-            sf.hud.view.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-        }) { [weak self] (position) in
-            guard let sf = self else {return}
-            completed(sf)
+        if #available(iOS 10.0, *) {
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {[weak self] in
+                guard let sf = self else {return}
+                sf.hud.view.alpha = 0.0
+                sf.hud.view.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            }) { [weak self] (position) in
+                guard let sf = self else {return}
+                completed(sf)
+            }
+        } else {
+            // Fallback on earlier versions
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {[weak self] in
+                guard let sf = self else {return}
+                sf.hud.view.alpha = 0.0
+                sf.hud.view.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                }, completion: {[weak self] (finished) in
+                    guard let sf = self else {return}
+                    completed(sf)
+            })
         }
     }
 }
