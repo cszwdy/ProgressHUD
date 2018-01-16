@@ -106,7 +106,13 @@ class ProgressView: UIView {
         let oval = CAShapeLayer()
         self.layer.addSublayer(oval)
         oval.fillColor   = nil
-        oval.strokeColor = UIColor(named: "AppleStyleColor", in: Bundle(for: ProgressHUD.self), compatibleWith: nil)?.cgColor
+        if #available(iOS 11.0, *) {
+            oval.strokeColor = UIColor(named: "AppleStyleColor", in: Bundle(for: ProgressHUD.self), compatibleWith: nil)?.cgColor
+        } else {
+            // Fallback on earlier versions
+            let v: CGFloat = 68.0/255.0
+            oval.strokeColor = UIColor(red: v, green: v, blue: v, alpha: 1.0).cgColor
+        }
         oval.lineWidth   = lineWidth
         let ovalFrame = bounds.insetBy(dx: inset, dy: inset)
         oval.frame = ovalFrame
@@ -121,7 +127,13 @@ class ProgressView: UIView {
         //        oval2.lineCap     = kCALineCapRound
         //        oval2.lineJoin    = kCALineJoinRound
         oval2.fillColor   = nil
-        oval2.strokeColor = UIColor(named: "AppleStyleColor", in: Bundle(for: ProgressHUD.self), compatibleWith: nil)?.cgColor
+        if #available(iOS 11.0, *) {
+            oval2.strokeColor = UIColor(named: "AppleStyleColor", in: Bundle(for: ProgressHUD.self), compatibleWith: nil)?.cgColor
+        } else {
+            // Fallback on earlier versions
+            let v: CGFloat = 68.0/255.0
+            oval2.strokeColor = UIColor(red: v, green: v, blue: v, alpha: 1.0).cgColor
+        }
         oval2.lineWidth   = raduis
         oval2.strokeStart = 0
         oval2.strokeEnd = 0
